@@ -25,6 +25,7 @@ module.exports = {
       ],
       env: {
         jest: true,
+        "vue/setup-compiler-macros": true, // 允许使用 Vue 3 的 setup 语法糖
       },
     },
   ],

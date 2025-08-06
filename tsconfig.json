@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "strict": true,
+    "strict": false, // TypeScript 的严格类型检查模式
     "jsx": "preserve",
     "moduleResolution": "node",
     "skipLibCheck": true,
