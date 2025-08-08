@@ -14,7 +14,6 @@ import type { OriDataType } from "../base/bilibili-banner-base.type";
 const baseSrc = "/bilibili/winter-5/";
 const marginLeft = 0;
 const moveRate = 300;
-const maxMove = { left: 2000, right: 2000 }; // 这两个是同时向外的，所以不用index定位
 const imgData: Array<OriDataType> = [
   {
     type: "image",

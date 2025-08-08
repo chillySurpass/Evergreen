@@ -11,7 +11,6 @@ import BilibiliBannerBaseComponent from "@/views/banner/base/bilibili-banner-bas
 import type { OriDataType } from "../base/bilibili-banner-base.type";
 
 const baseSrc = "/bilibili/winter-1/";
-const marginLeft = -40;
 const moveRate = -2;
 
 function getFileType(type: string): string {
