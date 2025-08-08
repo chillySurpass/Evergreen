@@ -1,83 +1,74 @@
 <template>
-  <div class="common-layout">
-    <el-container>
-      <el-aside width="200px">Aside</el-aside>
-      <el-header>
-        <div class="container">
-          <div class="card" v-if="randomBanner === 'spring1'">
-            <BilibiliSpring1BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'spring2'">
-            <BilibiliSpring2BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'spring3'">
-            <BilibiliSpring3BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'spring4'">
-            <BilibiliSpring4BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'spring5'">
-            <BilibiliSpring5BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'spring6'">
-            <BilibiliSpring6BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'summer1'">
-            <BilibiliSummer1BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'summer2'">
-            <BilibiliSummer2BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'summer3'">
-            <BilibiliSummer3BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'summer4'">
-            <BilibiliSummer4BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'summer5'">
-            <BilibiliSummer5BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'summer6'">
-            <BilibiliSummer6BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'summer7'">
-            <BilibiliSummer7BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'autumn1'">
-            <BilibiliAutumn1BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'autumn2'">
-            <BilibiliAutumn2BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'autumn3'">
-            <BilibiliAutumn3BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'autumn4'">
-            <BilibiliAutumn4BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'autumn5'">
-            <BilibiliAutumn5BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'winter1'">
-            <BilibiliWinter1BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'winter2'">
-            <BilibiliWinter2BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'winter3'">
-            <BilibiliWinter3BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'winter4'">
-            <BilibiliWinter4BannerComponent />
-          </div>
-          <div class="card" v-if="randomBanner === 'winter5'">
-            <BilibiliWinter5BannerComponent />
-          </div>
-        </div>
-      </el-header>
-      <el-main>Main</el-main>
-      <el-footer>Footer</el-footer>
-    </el-container>
+  <div class="container">
+    <div class="card" v-if="randomBanner === 'spring1'">
+      <BilibiliSpring1BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'spring2'">
+      <BilibiliSpring2BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'spring3'">
+      <BilibiliSpring3BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'spring4'">
+      <BilibiliSpring4BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'spring5'">
+      <BilibiliSpring5BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'spring6'">
+      <BilibiliSpring6BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'summer1'">
+      <BilibiliSummer1BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'summer2'">
+      <BilibiliSummer2BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'summer3'">
+      <BilibiliSummer3BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'summer4'">
+      <BilibiliSummer4BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'summer5'">
+      <BilibiliSummer5BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'summer6'">
+      <BilibiliSummer6BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'summer7'">
+      <BilibiliSummer7BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'autumn1'">
+      <BilibiliAutumn1BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'autumn2'">
+      <BilibiliAutumn2BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'autumn3'">
+      <BilibiliAutumn3BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'autumn4'">
+      <BilibiliAutumn4BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'autumn5'">
+      <BilibiliAutumn5BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'winter1'">
+      <BilibiliWinter1BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'winter2'">
+      <BilibiliWinter2BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'winter3'">
+      <BilibiliWinter3BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'winter4'">
+      <BilibiliWinter4BannerComponent />
+    </div>
+    <div class="card" v-if="randomBanner === 'winter5'">
+      <BilibiliWinter5BannerComponent />
+    </div>
   </div>
 </template>
 
@@ -149,8 +140,8 @@ onMounted(() => {
   gap: 16px;
 
   > .card {
-    width: 800px;
-    border-radius: 8px;
+    width: 100%;
+    border-radius: 0px;
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
     overflow: hidden;
   }
