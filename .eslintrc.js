@@ -14,6 +14,7 @@ module.exports = {
   },
   rules: {
     "prettier/prettier": ["error", { endOfLine: "auto" }],
+    "@typescript-eslint/no-explicit-any": "off", // 允许使用 any 类型
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
   },

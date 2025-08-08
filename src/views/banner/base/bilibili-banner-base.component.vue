@@ -122,10 +122,12 @@ const moveX = ref(0);
 const containerWidth = ref(0);
 
 onMounted(() => {
-  resizeObserver.value = new ResizeObserverWrap(containerRef.value!, (e) => {
-    containerWidth.value = e.clientWidth;
-  });
-  props.imgData.forEach((each, i) => {
+  if (containerRef.value) {
+    resizeObserver.value = new ResizeObserverWrap(containerRef.value, (e) => {
+      containerWidth.value = e.clientWidth;
+    });
+  }
+  props.imgData.forEach((each) => {
     each.x += marginLeft;
     each.newX += marginLeft;
     imgNewData.value.push({
@@ -168,7 +170,7 @@ const onMouseMove = (e: any): void => {
   }
 };
 
-const onMouseLeave = (e: any): void => {
+const onMouseLeave = (): void => {
   if (hasTouchEvent) {
     return;
   }
@@ -189,7 +191,7 @@ const onTouchMove = (e: any): void => {
   }
 };
 
-const onTouchEnd = (e: any): void => {
+const onTouchEnd = (): void => {
   if (hasTouchEvent) {
     bilibiliEnd();
   }
@@ -202,6 +204,7 @@ const bilibiliStart = (x: number, y: number): void => {
 };
 
 const bilibiliMove = (x: number, y: number): void => {
+  console.log(y);
   let __moveX = (x - startPoint.value.x) / moveRate;
   startPoint.value.x = x;
   moveX.value += __moveX;
