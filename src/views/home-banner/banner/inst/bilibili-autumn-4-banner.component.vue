@@ -10,7 +10,7 @@
   </BilibiliBannerBaseComponent>
 </template>
 <script setup lang="ts">
-import BilibiliBannerBaseComponent from "@/views/banner/base/bilibili-banner-base.component.vue";
+import BilibiliBannerBaseComponent from "@/views/home-banner/banner/base/bilibili-banner-base.component.vue";
 import type { OriDataType } from "../base/bilibili-banner-base.type";
 
 const baseSrc = "/bilibili/autumn-4/";

@@ -86,14 +86,14 @@
 </template>
 <script setup lang="ts">
 import { defineProps, onMounted, onUnmounted, ref } from "vue";
-import { BILIBILI_BANNER_LOGO_SHOW } from "@/views/banner/config";
-import { CommonUtil } from "@/views/banner/common-util";
+import { BILIBILI_BANNER_LOGO_SHOW } from "@/views/home-banner/banner/config";
+import { CommonUtil } from "@/views/home-banner/banner/common-util";
 import type {
   InstDataType,
   OriDataType,
-} from "@/views/banner/base/bilibili-banner-base.type";
-import AutoPlayVideoComponent from "@/views/auto-play-video/auto-play-video.component.vue";
-import { ResizeObserverWrap } from "@/views/banner/resize-observer.wrap";
+} from "@/views/home-banner/banner/base/bilibili-banner-base.type";
+import AutoPlayVideoComponent from "@/views/home-banner/auto-play-video/auto-play-video.component.vue";
+import { ResizeObserverWrap } from "@/views/home-banner/banner/resize-observer.wrap";
 
 const props = defineProps<{
   baseSrc: string;

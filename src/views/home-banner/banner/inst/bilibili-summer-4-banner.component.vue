@@ -10,9 +10,9 @@
   </BilibiliBannerBaseComponent>
 </template>
 <script setup lang="ts">
-import BilibiliBannerBaseComponent from "@/views/banner/base/bilibili-banner-base.component.vue";
+import BilibiliBannerBaseComponent from "@/views/home-banner/banner/base/bilibili-banner-base.component.vue";
 import type { OriDataType } from "../base/bilibili-banner-base.type";
-import { CommonUtil } from "@/views/banner/common-util";
+import { CommonUtil } from "@/views/home-banner/banner/common-util";
 
 const baseSrc = "/bilibili/summer-4/";
 const marginLeft = 40;
