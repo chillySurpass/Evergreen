@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <el-row :span="24">
-      <el-col :span="5">
-        <div class="left"></div>
+      <el-col :span="4">
+        <div class="left"><homeNavigation></homeNavigation></div>
       </el-col>
-      <el-col :span="19" class="right">
+      <el-col :span="20" class="right">
         <div class="right-top"><homeBanner></homeBanner></div>
         <div class="right-bottom"></div>
       </el-col>
@@ -14,6 +14,7 @@
 
 <script setup lang="ts">
 import homeBanner from "@/views/home-banner/homeBanner.vue";
+import homeNavigation from "@/views/home-navigation/honeNavigation.vue";
 </script>
 
 <style lang="scss">
@@ -23,7 +24,8 @@ import homeBanner from "@/views/home-banner/homeBanner.vue";
 }
 .left {
   height: 100%;
-  background-color: aqua;
+  padding: 10px;
+  background-color: #f6f7f8;
 }
 .right {
   height: 100%;
