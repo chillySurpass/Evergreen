@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <el-row :span="24">
-      <el-col :span="4">
+      <el-col :span="5">
         <div class="left"><homeNavigation></homeNavigation></div>
       </el-col>
-      <el-col :span="20" class="right">
+      <el-col :span="19" class="right">
         <div class="right-top"><homeBanner></homeBanner></div>
         <div class="right-bottom"></div>
       </el-col>
@@ -24,7 +24,6 @@ import homeNavigation from "@/views/home-navigation/honeNavigation.vue";
 }
 .left {
   height: 100%;
-  padding: 10px;
   background-color: #f6f7f8;
 }
 .right {
