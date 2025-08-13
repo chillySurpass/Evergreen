@@ -12,7 +12,35 @@
     </div>
     <div class="sub-line"></div>
     <!-- 第二层 -->
-    <div class="navigation-item">第二层</div>
+    <div class="navigation-item second-layer">
+      <div
+        class="block"
+        :class="{ selected: selectedIndex === 0 }"
+        @click="handleClick(0)"
+      >
+        <div class="icon">📦</div>
+        <div class="text">归档</div>
+        <div class="count">12</div>
+      </div>
+      <div
+        class="block"
+        :class="{ selected: selectedIndex === 1 }"
+        @click="handleClick(1)"
+      >
+        <div class="icon">📂</div>
+        <div class="text">分类</div>
+        <div class="count">8</div>
+      </div>
+      <div
+        class="block"
+        :class="{ selected: selectedIndex === 2 }"
+        @click="handleClick(2)"
+      >
+        <div class="icon">🏷️</div>
+        <div class="text">标签</div>
+        <div class="count">20</div>
+      </div>
+    </div>
     <div class="sub-line"></div>
     <!-- 第三层 -->
     <div class="navigation-item wide">第三层</div>
@@ -22,7 +50,15 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+
+const selectedIndex = ref<number | null>(null);
+
+const handleClick = (index: number) => {
+  selectedIndex.value = index;
+};
+</script>
 
 <style lang="scss" scoped>
 .navigation {
@@ -66,7 +102,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  gap: 6px; /* 每个 sub-item 之间的间距 */
+  gap: 6px;
 }
 
 .sub-item {
@@ -87,10 +123,10 @@
     font-size: 18px;
     color: #333;
     position: relative;
-    display: inline-block; /* 只包裹文字 */
+    display: inline-block;
     margin: 4px auto;
-    padding: 0px 32px; /* 增加内边距，文字与边框距离更大 */
-    width: auto; /* 取消继承的100%宽度 */
+    padding: 0px 32px;
+    width: auto;
 
     &::before,
     &::after {
@@ -104,7 +140,6 @@
       transition: transform 0.25s ease;
     }
 
-    /* 左上折角，往外偏移 */
     &::before {
       top: -2px;
       left: -2px;
@@ -112,7 +147,6 @@
       transform-origin: top left;
     }
 
-    /* 右下折角，往外偏移 */
     &::after {
       bottom: -2px;
       right: -2px;
@@ -159,5 +193,55 @@
       0 0 40px 25px rgba(173, 216, 230, 0.3),
       0 0 40px 25px rgba(221, 160, 221, 0.3);
   }
+}
+
+/* 第二层样式 */
+.second-layer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 6px; /* 间距减小 */
+}
+
+.second-layer .block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  background-color: transparent;
+}
+
+.second-layer .block:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.second-layer .block.selected {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.second-layer .block:active {
+  transform: translateY(0);
+}
+
+.second-layer .icon {
+  font-size: 24px;
+}
+
+.second-layer .text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.second-layer .count {
+  font-size: 12px;
+  color: #555;
 }
 </style>
