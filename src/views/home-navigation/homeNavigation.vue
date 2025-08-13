@@ -78,7 +78,8 @@
 
   &.name {
     font-size: 16px;
-    color: gray;
+    color: #6c757d;
+    font-weight: 600;
     width: auto;
   }
 
@@ -127,7 +128,7 @@
 
   &.web {
     font-size: 12px;
-    color: #000;
+    color: #222;
     width: auto;
   }
 
