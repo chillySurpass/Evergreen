@@ -10,17 +10,13 @@
       <div class="sub-item web">Ever Green.</div>
       <div class="sub-item slogan">深渊在我后背 想晒到太阳只有我的墓碑</div>
     </div>
-
     <div class="sub-line"></div>
-
     <!-- 第二层 -->
     <div class="navigation-item">第二层</div>
     <div class="sub-line"></div>
-
     <!-- 第三层 -->
     <div class="navigation-item wide">第三层</div>
     <div class="sub-line"></div>
-
     <!-- 第四层 -->
     <div class="navigation-item">第四层</div>
   </div>
@@ -70,7 +66,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  gap: 8px; /* 每个 sub-item 之间的间距 */
+  gap: 6px; /* 每个 sub-item 之间的间距 */
 }
 
 .sub-item {
