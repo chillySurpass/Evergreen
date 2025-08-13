@@ -61,57 +61,88 @@
   &.wide {
     flex: 2;
   }
+}
 
-  &.first-layer {
-    flex: 3;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+/* 第一层样式 */
+.navigation-item.first-layer {
+  flex: 3;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 8px; /* 每个 sub-item 之间的间距 */
 }
 
 .sub-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   padding: 2px;
   text-align: center;
 
   &.name {
     font-size: 16px;
     color: gray;
+    width: auto;
   }
 
   &.title {
     font-size: 18px;
     color: #333;
     position: relative;
+    display: inline-block; /* 只包裹文字 */
+    margin: 4px auto;
+    padding: 0px 32px; /* 增加内边距，文字与边框距离更大 */
+    width: auto; /* 取消继承的100%宽度 */
 
+    &::before,
     &::after {
       content: "";
       position: absolute;
-      width: 10px;
-      height: 10px;
-      opacity: 0;
-      border: 2px solid rgba(0, 0, 0, 0.3);
-      border-width: 0 2px 2px 0;
-      transition: opacity 0.3s cubic-bezier(0.17, 0.67, 0.05, 1.29);
+      width: 8px;
+      height: 8px;
+      border-color: black;
+      border-style: solid;
+      transform: scale(0);
+      transition: transform 0.25s ease;
     }
 
+    /* 左上折角，往外偏移 */
+    &::before {
+      top: -2px;
+      left: -2px;
+      border-width: 2px 0 0 2px;
+      transform-origin: top left;
+    }
+
+    /* 右下折角，往外偏移 */
+    &::after {
+      bottom: -2px;
+      right: -2px;
+      border-width: 0 2px 2px 0;
+      transform-origin: bottom right;
+    }
+
+    &:hover::before,
     &:hover::after {
-      opacity: 1;
+      transform: scale(1);
     }
   }
 
   &.web {
     font-size: 12px;
     color: #000;
+    width: auto;
   }
 
   &.slogan {
     font-size: 16px;
     color: #000;
+    width: auto;
+  }
+
+  &.avatar {
+    margin-bottom: 12px;
   }
 }
 
