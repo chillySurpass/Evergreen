@@ -88,7 +88,7 @@ const totalArticles = computed(() => props.articles.length);
 <style lang="scss" scoped>
 .article-timeline {
   padding: 20px;
-  background-color: #fff;
+  background-color: #f9fcff;
   overflow-y: auto;
 
   /* 顶部总览 */
@@ -105,19 +105,19 @@ const totalArticles = computed(() => props.articles.length);
       gap: 8px;
 
       .summary-icon {
-        font-size: px;
+        font-size: 18px;
       }
 
       .summary-title {
-        font-size: 32px;
+        font-size: 22px;
         font-weight: bold;
-        color: #111;
+        color: #1a4f7a;
       }
     }
 
     .summary-count {
-      font-size: 20px;
-      color: #666;
+      font-size: 18px;
+      color: #4a90e2;
     }
   }
 
@@ -130,14 +130,18 @@ const totalArticles = computed(() => props.articles.length);
     span {
       font-size: 20px;
       font-weight: bold;
-      color: #111;
+      color: #1a4f7a;
+      background: #e6f2ff;
+      padding: 4px 12px;
+      border-radius: 14px;
+      border: 1px solid #a6c8e0;
     }
 
     .year-bar {
       flex: 1;
       height: 4px;
       border-radius: 2px;
-      background: linear-gradient(to right, #888, #ccc);
+      background: linear-gradient(to right, #a6c8e0, #e6f2ff);
     }
   }
 
@@ -146,28 +150,42 @@ const totalArticles = computed(() => props.articles.length);
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 8px;
+    border: 1px solid #d6e9f8;
+    background: #ffffff;
 
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 12px rgba(64, 158, 255, 0.15);
+      border-color: #a6c8e0;
     }
 
     &:active {
       transform: translateY(0);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(64, 158, 255, 0.1);
     }
 
     .title {
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 6px;
-      color: #333;
+      color: #1a4f7a;
     }
 
     .summary {
       font-size: 14px;
-      color: #666;
+      color: #4a90e2;
     }
+  }
+
+  /* 时间线竖线和节点颜色 */
+  :deep(.el-timeline-item__tail) {
+    background: linear-gradient(to bottom, #a6c8e0, #e6f2ff);
+    width: 2px;
+  }
+
+  :deep(.el-timeline-item__node--primary) {
+    border-color: #409eff;
+    background-color: #409eff;
   }
 }
 </style>
