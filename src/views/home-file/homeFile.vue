@@ -29,7 +29,7 @@
         <el-timeline-item
           v-for="(article, index) in yearArticles"
           :key="`${year}-${index}`"
-          :timestamp="article.date"
+          :timestamp="formatDate(article.date)"
           placement="top"
         >
           <el-card
@@ -65,6 +65,11 @@ const emit = defineEmits<{
 
 const onClick = (article: Article) => {
   emit("select", article);
+};
+
+const formatDate = (dateStr: string) => {
+  const [, month, day] = dateStr.split("-");
+  return `${month}-${day}`;
 };
 
 // 按年份分组，倒序
@@ -175,12 +180,6 @@ const totalArticles = computed(() => props.articles.length);
       font-size: 14px;
       color: #4a90e2;
     }
-  }
-
-  /* 时间线竖线和节点颜色 */
-  :deep(.el-timeline-item__tail) {
-    background: linear-gradient(to bottom, #a6c8e0, #e6f2ff);
-    width: 2px;
   }
 
   :deep(.el-timeline-item__node--primary) {
